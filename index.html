@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>INDORE RUN — ArtViSiON STUDiOn · Indore</title>
+<style>
+  html,body{margin:0;height:100%;background:#07080f;color:#e8ecff;overflow:hidden;
+    font:600 15px system-ui,"Segoe UI",sans-serif}
+  body{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center}
+  .brand{font-size:11px;letter-spacing:.22em;color:rgba(179,157,255,.75)}
+  h1{margin:0;font:300 46px system-ui,"Segoe UI",sans-serif;letter-spacing:.06em;line-height:1.05}
+  h1 b{font-weight:800;text-shadow:0 0 18px #9fd8ff}
+  h1 i{font-style:normal;font-weight:800;color:#ff8ac2;text-shadow:0 0 18px #ff8ac2}
+  a.btn{color:#61e2ff;text-decoration:none;border:1px solid rgba(97,226,255,.5);
+    padding:14px 26px;border-radius:12px;font-weight:800;letter-spacing:.04em}
+  a.btn:hover{background:rgba(97,226,255,.12)}
+  .note{font-size:11.5px;color:rgba(255,255,255,.45);font-weight:600}
+  #warn{display:none;max-width:420px;line-height:1.6;padding:14px 18px;border-radius:12px;
+    background:rgba(255,92,138,.1);border:1px solid rgba(255,92,138,.5);color:#ffb0c8;
+    font-size:12.5px;font-weight:700}
+  code{background:rgba(255,255,255,.1);padding:1px 5px;border-radius:4px}
+</style>
+</head>
+<body>
+  <div class="brand">ARTViSiON STUDiOn · RJ SARKAR · iNDORE</div>
+  <h1><b>INDORE</b><br/><i>RUN</i></h1>
+  <a class="btn" href="Run-Indore.html">▶ LAUNCH GAME</a>
+  <div class="note">SPACE / ⬆ jump &nbsp;·&nbsp; ⬇ duck &nbsp;·&nbsp; 2× SPACE = HIGH JUMP<br/>
+    LEVEL UP har 200 m par · M sound · F fullscreen</div>
+  <div id="warn">
+    ⚠ <code>Run-Indore.html</code> is repo mein upload nahi hua hai.<br/>
+    Game file ko isi folder (<code>Run-Indore</code> repo, branch <code>main</code>) mein upload karein.
+  </div>
+<script>
+/* redirect only if the game file really exists — warn instead of a silent 404 */
+(function(){
+  var go=function(){location.replace('Run-Indore.html');};
+  try{
+    fetch('Run-Indore.html',{method:'HEAD'}).then(function(r){
+      if(r.ok)go(); else document.getElementById('warn').style.display='block';
+    }).catch(function(){go();});
+  }catch(e){go();}
+})();
+</script>
+</body>
+</html>
